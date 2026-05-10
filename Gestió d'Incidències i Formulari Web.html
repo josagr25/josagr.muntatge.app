@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MicroSupport Mantenimiento - Gestión de Incidencias</title>
+    <link rel="stylesheet" href="Gestió d'Incidències i Formulari Web.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-top">
+            <div class="logo">
+                <span class="logo-icon"></span>
+                <div class="logo-text">
+                    <h1>MicroSupport</h1>
+                    <p>Soluciones Informáticas</p>
+                </div>
+            </div>
+            <div class="company-info">
+                <p>📍 Calle del Silicio, 42, 08010 Barcelona</p>
+                <p>📞 93 456 78 90 ✉️ soporte@techfix.es</p>
+            </div>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="Inicio.html" class="active">Inicio</a></li>
+                <li><a href="Tarifas.html">Tarifas</a></li>
+                <li><a href="Quiénes somos.html">Quiénes somos</a></li>
+                <li><a href="Contactos.html">Contacto</a></li>
+                <li><a href="Gestió d'Incidències i Formulari Web.html">Envia tu incidencia</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="incidencia" class="form-container">
+            <h2>🛠️ Registro de Incidencia Técnica</h2>
+            <p>Por favor, rellena el siguiente formulario para que podamos gestionar tu reparación lo antes posible.</p>
+
+            <form action="#">
+                <fieldset>
+                    <legend>Datos del Cliente</legend>
+                    <div class="grid-3">
+                        <div class="field">
+                            <label for="nom">Nombre Completo *</label>
+                            <input type="text" id="nom" name="nom" placeholder="Ej: Juan García" required>
+                        </div>
+                        <div class="field">
+                            <label for="email">Correo Electrónico *</label>
+                            <input type="email" id="email" name="email" placeholder="correo@ejemplo.es" required>
+                        </div>
+                        <div class="field">
+                            <label for="tel">Teléfono de Contacto *</label>
+                            <input type="tel" id="tel" name="tel" placeholder="600 000 000" required>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Identificación del Equipo</legend>
+                    <div class="grid-3">
+                        <div class="field">
+                            <label for="marca">Marca / Modelo *</label>
+                            <input type="text" id="marca" name="marca" placeholder="Ej: Dell XPS 13" required>
+                        </div>
+                        <div class="field">
+                            <label for="so">Sistema Operativo</label>
+                            <select id="so" name="so">
+                                <option value="windows">Windows</option>
+                                <option value="linux">Linux</option>
+                                <option value="macos">macOS</option>
+                                <option value="otros">Otros</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label>Tipo de equipo</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="tipus" value="sobremesa"> Sobremesa</label>
+                                <label><input type="radio" name="tipus" value="portatil" checked> Portátil</label>
+                                <label><input type="radio" name="tipus" value="servidor"> Servidor</label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Componentes posiblemente afectados</legend>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="comp" value="disco"> Disco duro (HDD/SSD)</label>
+                        <label><input type="checkbox" name="comp" value="ram"> Memoria RAM</label>
+                        <label><input type="checkbox" name="comp" value="cpu"> Procesador (CPU)</label>
+                        <label><input type="checkbox" name="comp" value="gpu"> Tarjeta Gráfica</label>
+                        <label><input type="checkbox" name="comp" value="fuente"> Fuente de alimentación</label>
+                        <label><input type="checkbox" name="comp" value="pantalla"> Pantalla</label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Descripción de la Avería</legend>
+                    <div class="field">
+                        <label for="simptomes">Síntomas (¿qué hace el equipo?) *</label>
+                        <textarea id="simptomes" name="simptomes" rows="3"
+                            placeholder="Ej: No enciende, se reinicia solo..." required></textarea>
+                    </div>
+                    <div class="field">
+                        <label for="errors">Señales acústicas (beeps) o mensajes de error</label>
+                        <input type="text" id="errors" name="errors"
+                            placeholder="Ej: 3 beeps cortos o código 0x00000...">
+                    </div>
+                    <div class="field">
+                        <label for="accio">Última acción realizada antes del error</label>
+                        <input type="text" id="accio" name="accio"
+                            placeholder="Ej: Instalar un programa, actualización...">
+                    </div>
+                </fieldset>
+                </div>
+
+                <button type="submit" class="btn-enviar">Enviar Incidencia</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Horario de Atención</h4>
+                <p>Lunes a Viernes: 09:00h - 19:00h</p>
+                <p>Sábados: 10:00h - 14:00h</p>
+            </div>
+            <div class="footer-section">
+                <div class="social-icons">
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <p><a href="#">Política de Privacidad</a></p>
+                <p><a href="#">Aviso Legal</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MicroSoporte Soluciones Informáticas - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
